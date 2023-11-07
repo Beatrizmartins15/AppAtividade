@@ -62,7 +62,11 @@ export const Cadastrar = () => {
         secureTextEntry
         onChangeText={(text) => setPassword(text)}
       />
-      <Pressable title={"Sign Up"} onPress={() => doCadastrar()} />
+      <Pressable style={styles.btnCadastrar} onPress={() => doCadastrar()}>
+    <Text>
+        Cadastrar Produto
+    </Text>
+      </Pressable>
       </View>
     </SafeAreaView>
   );
@@ -92,6 +96,16 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     backgroundColor: "#e8e8e8",
     padding: 5,
+  },
+  btnCadastrar:{
+    backgroundColor: "#8F00DB",
+    height: 40,
+    width: "80%",
+    alignItems: "center",
+    justifyContent: "center",
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+
   },
     container__safe:{
         flex: 1
